@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:marble_jawbreaker"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 150,
+      "max_inclusive": 180
+    }
+  }
+}

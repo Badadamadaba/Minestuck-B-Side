@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:iron_cane"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 300,
+      "max_inclusive": 400
+    }
+  }
+}

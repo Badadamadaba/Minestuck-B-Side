@@ -1,0 +1,9 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:grist_sulfur_block"
+  },
+  "grist_cost": {
+    "minestuck:sulfur": 1000
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:grist_iodine_block"
+  },
+  "grist_cost": {
+    "minestuck:iodine": 1000
+  }
+}

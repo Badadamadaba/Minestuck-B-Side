@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minecraft:stone"
+  },
+  "input2": {
+    "item": "minestuck:zillium_skittles"
+  },
+  "mode": "and",
+  "output": {
+    "item": "minestuck:grist_zillium_block"
+  }
+}

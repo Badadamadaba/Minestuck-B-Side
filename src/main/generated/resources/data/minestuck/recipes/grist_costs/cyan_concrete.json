@@ -1,0 +1,12 @@
+{
+  "type": "minestuck:source_grist_cost",
+  "ingredient": {
+    "item": "minecraft:cyan_concrete"
+  },
+  "grist_cost": {
+    "minestuck:cobalt": 1
+  },
+  "sources": [
+    "minecraft:cyan_concrete_powder"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:desert_fruit"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 2,
+      "max_inclusive": 6
+    }
+  }
+}

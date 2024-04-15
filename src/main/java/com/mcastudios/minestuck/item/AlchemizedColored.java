@@ -1,0 +1,16 @@
+package com.mcastudios.minestuck.item;
+
+import com.mcastudios.minestuck.util.ColorHandler;
+import net.minecraft.world.item.ItemStack;
+
+/**
+ * Implement this if the item should be alchemized with a color.
+ * The logic for actually setting the color is stored in {@link com.mcastudios.minestuck.util.ColorHandler}
+ */
+public interface AlchemizedColored
+{
+	default ItemStack setColor(ItemStack stack, int color)
+	{
+		return ColorHandler.setColor(stack, color);
+	}
+}

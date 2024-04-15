@@ -1,0 +1,9 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:grist_caulk_block"
+  },
+  "grist_cost": {
+    "minestuck:caulk": 1000
+  }
+}

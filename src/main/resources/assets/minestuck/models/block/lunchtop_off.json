@@ -1,0 +1,85 @@
+{
+	"credit": "crafted with love by the grease artisan mysterymeat",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "minestuck:block/lunchtop_off",
+		"particle": "minestuck:block/lunchtop_off"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 1.5],
+			"to": [12, 5, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 8.5]},
+			"faces": {
+				"north": {"uv": [3.5, 3.5, 7.5, 6], "texture": "#0"},
+				"east": {"uv": [0, 3.5, 3.5, 6], "texture": "#0"},
+				"south": {"uv": [11, 3.5, 15, 6], "texture": "#0"},
+				"west": {"uv": [7.5, 3.5, 11, 6], "texture": "#0"},
+				"up": {"uv": [7.5, 3.5, 3.5, 0], "texture": "#0"},
+				"down": {"uv": [11.5, 0, 7.5, 3.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 3.5, 1],
+			"to": [11, 4.5, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3.5, 2]},
+			"faces": {
+				"north": {"uv": [0.5, 10, 3.5, 10.5], "texture": "#0"},
+				"east": {"uv": [0, 10, 0.5, 10.5], "texture": "#0"},
+				"south": {"uv": [4, 10, 7, 10.5], "texture": "#0"},
+				"west": {"uv": [3.5, 10, 4, 10.5], "texture": "#0"},
+				"up": {"uv": [3.5, 10, 0.5, 9.5], "texture": "#0"},
+				"down": {"uv": [6.5, 9.5, 3.5, 10], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -180, 90],
+			"translation": [4.75, -2, -5],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -180, 90],
+			"translation": [4.75, -2, -5],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -180, -21],
+			"translation": [-1, 2.75, -4.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -180, -21],
+			"translation": [-1, 2.75, -0.75]
+		},
+		"ground": {
+			"translation": [0, 4.5, 3.5]
+		},
+		"gui": {
+			"rotation": [63, -145, 0],
+			"translation": [-2.25, 6.25, 0],
+			"scale": [1.3, 1.3, 1.3]
+		},
+		"head": {
+			"translation": [0, -29, 0],
+			"scale": [1.6, 1.6, 1.6]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 3, -6.75]
+		}
+	},
+	"groups": [
+		{
+			"name": "root",
+			"origin": [8, 8, 8],
+			"children": [
+				{
+					"name": "lid",
+					"origin": [8, 8, 8],
+					"children": [0, 1]
+				}
+			]
+		}
+	]
+}

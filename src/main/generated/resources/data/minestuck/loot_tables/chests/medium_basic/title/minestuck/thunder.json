@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "weapons",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": []
+    },
+    {
+      "name": "supplies",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": []
+    },
+    {
+      "name": "misc",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "quality": 2,
+          "name": "minestuck:crew_poster"
+        }
+      ]
+    }
+  ]
+}

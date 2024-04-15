@@ -1,0 +1,112 @@
+{
+  "parent": "minestuck:minestuck/new_modus",
+  "display": {
+    "icon": {
+      "item": "minestuck:queuestack_modus_card"
+    },
+    "title": {
+      "translate": "advancements.minestuck.all_modi.title"
+    },
+    "description": {
+      "translate": "advancements.minestuck.all_modi.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "stack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:stack_modus_card"
+            ]
+          }
+        ]
+      }
+    },
+    "queue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:queue_modus_card"
+            ]
+          }
+        ]
+      }
+    },
+    "queue_stack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:queuestack_modus_card"
+            ]
+          }
+        ]
+      }
+    },
+    "tree": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:tree_modus_card"
+            ]
+          }
+        ]
+      }
+    },
+    "hash_map": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:hashmap_modus_card"
+            ]
+          }
+        ]
+      }
+    },
+    "set": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:set_modus_card"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "stack"
+    ],
+    [
+      "queue"
+    ],
+    [
+      "queue_stack"
+    ],
+    [
+      "tree"
+    ],
+    [
+      "hash_map"
+    ],
+    [
+      "set"
+    ]
+  ]
+}

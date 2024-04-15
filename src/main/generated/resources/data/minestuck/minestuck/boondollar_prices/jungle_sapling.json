@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minecraft:jungle_sapling"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 60,
+      "max_inclusive": 90
+    }
+  }
+}

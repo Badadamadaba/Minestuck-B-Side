@@ -1,0 +1,10 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:zillystone"
+  },
+  "grist_cost": {
+    "minestuck:zillium": 1,
+    "minestuck:build": 100
+  }
+}

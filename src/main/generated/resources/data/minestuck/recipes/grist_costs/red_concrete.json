@@ -1,0 +1,12 @@
+{
+  "type": "minestuck:source_grist_cost",
+  "ingredient": {
+    "item": "minecraft:red_concrete"
+  },
+  "grist_cost": {
+    "minestuck:cobalt": 1
+  },
+  "sources": [
+    "minecraft:red_concrete_powder"
+  ]
+}

@@ -1,0 +1,23 @@
+package com.mcastudios.minestuck.inventory.musicplayer;
+
+import com.mcastudios.minestuck.block.EnumCassetteType;
+import com.mcastudios.minestuck.item.weapon.MusicPlayerWeapon;
+import net.minecraft.world.item.ItemStack;
+
+/**
+ * The music playing capability keeps track of
+ * the music cassette currently played by the player that the capability is attached to,
+ * as well as which music player item stack that is being used to play it.
+ * This interface defines how to interact with this capability.
+ *
+ * @see MusicPlayerWeapon
+ */
+
+public interface IMusicPlaying
+{
+	void setMusicPlaying(ItemStack cassettePlayer, EnumCassetteType cassetteType);
+	
+	EnumCassetteType getCassetteType();
+	
+	ItemStack getCurrentMusicPlayer();
+}

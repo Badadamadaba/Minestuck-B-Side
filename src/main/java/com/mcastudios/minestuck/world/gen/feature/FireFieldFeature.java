@@ -1,0 +1,51 @@
+package com.mcastudios.minestuck.world.gen.feature;
+
+import com.mojang.serialization.Codec;
+import com.mcastudios.minestuck.world.gen.structure.blocks.StructureBlockRegistry;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+
+import java.util.Random;
+
+public class FireFieldFeature extends Feature<NoneFeatureConfiguration>
+{
+	private static final int BLOCK_COUNT = 96;
+	private static final float FIRE_CHANCE = 0.5F;
+	
+	public FireFieldFeature(Codec<NoneFeatureConfiguration> codec)
+	{
+		super(codec);
+	}
+	
+	
+	@Override
+	public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context)
+	{
+		WorldGenLevel level = context.level();
+		BlockPos pos = context.origin();
+		Random rand = context.random();
+		StructureBlockRegistry blocks = StructureBlockRegistry.getOrDefault(context.chunkGenerator());
+		BlockState surface = blocks.getBlockState("surface");
+		BlockState upper = blocks.getBlockState("upper");
+		
+		for(int i2 = 0; i2 < BLOCK_COUNT; i2++)
+		{
+			BlockPos pos1 = pos.offset(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
+			BlockState block = level.getBlockState(pos1);
+			if(block == surface || block == upper)
+			{
+				level.setBlock(pos1, Blocks.NETHERRACK.defaultBlockState(), Block.UPDATE_CLIENTS);
+				if(level.isEmptyBlock(pos1.above()) && rand.nextFloat() < FIRE_CHANCE)
+					level.setBlock(pos1.above(), Blocks.FIRE.defaultBlockState(), Block.UPDATE_CLIENTS);
+			}
+		}
+		
+		return true;
+	}
+}

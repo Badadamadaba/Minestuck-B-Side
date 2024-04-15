@@ -1,0 +1,67 @@
+package com.mcastudios.minestuck.command.argument;
+
+import com.mojang.brigadier.StringReader;
+import com.mojang.brigadier.arguments.ArgumentType;
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
+import com.mojang.brigadier.suggestion.Suggestions;
+import com.mojang.brigadier.suggestion.SuggestionsBuilder;
+import com.mcastudios.minestuck.world.lands.LandTypes;
+import com.mcastudios.minestuck.world.lands.title.TitleLandType;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.SharedSuggestionProvider;
+import net.minecraft.commands.synchronization.ArgumentSerializer;
+import net.minecraft.commands.synchronization.EmptyArgumentSerializer;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+public class TitleLandTypeArgument implements ArgumentType<TitleLandType>
+{
+	public static final ArgumentSerializer<TitleLandTypeArgument> SERIALIZER = new EmptyArgumentSerializer<>(TitleLandTypeArgument::titleLandType);
+	
+	private static final List<String> EXAMPLES = Arrays.asList("minestuck:frost", "minestuck:shade");
+	
+	public static final String INVALID = "argument.title_land_type.invalid";
+	public static final DynamicCommandExceptionType INVALID_TYPE = new DynamicCommandExceptionType(o -> new TranslatableComponent(INVALID, o));
+	
+	public static TitleLandTypeArgument titleLandType()
+	{
+		return new TitleLandTypeArgument();
+	}
+	
+	@Override
+	public TitleLandType parse(StringReader reader) throws CommandSyntaxException
+	{
+		int start2 = reader.getCursor();
+		ResourceLocation gristName = ResourceLocation.read(reader);
+		if(!LandTypes.TITLE_REGISTRY.get().containsKey(gristName))
+		{
+			reader.setCursor(start2);
+			throw INVALID_TYPE.createWithContext(reader, gristName);
+		}
+		return LandTypes.TITLE_REGISTRY.get().getValue(gristName);
+	}
+	
+	@Override
+	public <S> CompletableFuture<Suggestions> listSuggestions(CommandContext<S> context, SuggestionsBuilder builder)
+	{
+		return SharedSuggestionProvider.suggestResource(LandTypes.TITLE_REGISTRY.get().getValues().stream().map(TitleLandType::getRegistryName), builder);
+	}
+	
+	@Override
+	public Collection<String> getExamples()
+	{
+		return EXAMPLES;
+	}
+	
+	public static TitleLandType get(CommandContext<CommandSourceStack> context, String id)
+	{
+		return context.getArgument(id, TitleLandType.class);
+	}
+}

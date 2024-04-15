@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minecraft:stone"
+  },
+  "input2": {
+    "item": "minestuck:shale_peep"
+  },
+  "mode": "and",
+  "output": {
+    "item": "minestuck:grist_shale_block"
+  }
+}

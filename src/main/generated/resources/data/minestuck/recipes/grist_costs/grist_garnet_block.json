@@ -1,0 +1,9 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:grist_garnet_block"
+  },
+  "grist_cost": {
+    "minestuck:garnet": 1000
+  }
+}

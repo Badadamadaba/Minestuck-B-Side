@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:source_grist_cost",
+  "ingredient": {
+    "tag": "forge:ores/lapis"
+  },
+  "grist_cost": {
+    "minestuck:build": 4
+  },
+  "sources": [
+    "minecraft:lapis_lazuli"
+  ],
+  "multiplier": 20.0
+}

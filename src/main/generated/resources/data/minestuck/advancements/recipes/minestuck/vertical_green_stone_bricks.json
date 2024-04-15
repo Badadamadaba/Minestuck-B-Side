@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minestuck:vertical_green_stone_bricks"
+    ]
+  },
+  "criteria": {
+    "has_polished_green_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:polished_green_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minestuck:vertical_green_stone_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_green_stone",
+      "has_the_recipe"
+    ]
+  ]
+}

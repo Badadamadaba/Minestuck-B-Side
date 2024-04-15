@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minestuck:bug_on_a_stick"
+    ]
+  },
+  "criteria": {
+    "has_jag_of_bugs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:jar_of_bugs"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minestuck:bug_on_a_stick"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jag_of_bugs",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:thorny_subject"
+  },
+  "grist_cost": {
+    "minestuck:build": 87,
+    "minestuck:amethyst": 9,
+    "minestuck:ruby": 1
+  }
+}

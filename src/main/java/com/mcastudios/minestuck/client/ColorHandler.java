@@ -1,0 +1,66 @@
+package com.mcastudios.minestuck.client;
+
+import com.mcastudios.minestuck.Minestuck;
+import com.mcastudios.minestuck.block.MSBlocks;
+import com.mcastudios.minestuck.client.renderer.BlockColorCruxite;
+import com.mcastudios.minestuck.item.FrogItem;
+import com.mcastudios.minestuck.item.MSItems;
+import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.client.color.item.ItemColor;
+import net.minecraft.client.color.item.ItemColors;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.StemBlock;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber(modid = Minestuck.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+public class ColorHandler
+{
+    @SubscribeEvent
+    public static void onItemColors(ColorHandlerEvent.Item event)
+    {
+        ItemColors itemColors = event.getItemColors();
+    
+        itemColors.register((stack, tintIndex) -> BlockColorCruxite.handleColorTint(com.mcastudios.minestuck.util.ColorHandler.getColorFromStack(stack), tintIndex),
+                MSBlocks.CRUXITE_DOWEL.get(), MSItems.CRUXITE_APPLE.get(), MSItems.CRUXITE_POTION.get());
+        itemColors.register(new FrogItemColor(), MSItems.FROG.get());
+    }
+    
+    @SubscribeEvent
+    public static void initBlockColors(ColorHandlerEvent.Block event)
+    {
+        BlockColors colors = event.getBlockColors();
+        colors.register(new BlockColorCruxite(), MSBlocks.ALCHEMITER.TOTEM_PAD.get(), MSBlocks.TOTEM_LATHE.DOWEL_ROD.get(), MSBlocks.CRUXITE_DOWEL.get());
+        colors.register((state, worldIn, pos, tintIndex) -> stemColor(state.getValue(StemBlock.AGE)), MSBlocks.STRAWBERRY_STEM.get());
+        colors.register((state, worldIn, pos, tintIndex) -> stemColor(7), MSBlocks.ATTACHED_STRAWBERRY_STEM.get()); //7 is equivalent to a fully grown stem block
+    }
+    
+    public static int stemColor(int age)
+    {
+        int red = age * 32;
+        int green = 255 - age * 8;
+        int blue = age * 4;
+        return red << 16 | green << 8 | blue;
+    }
+
+    protected static class FrogItemColor implements ItemColor
+    {
+        public int getColor(ItemStack stack, int tintIndex)
+        {
+            int color = -1;
+            int type = !stack.hasTag() ? 0 : stack.getTag().getInt("Type");
+            if(type == 0)
+            {
+                switch(tintIndex)
+                {
+                    case 0: color = FrogItem.getSkinColor(stack); break;
+                    case 1: color = FrogItem.getEyeColor(stack); break;
+                    case 2: color = FrogItem.getBellyColor(stack); break;
+                }
+            }
+            return color;
+        }
+    }
+}

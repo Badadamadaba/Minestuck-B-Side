@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:crew_poster"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 350,
+      "max_inclusive": 400
+    }
+  }
+}

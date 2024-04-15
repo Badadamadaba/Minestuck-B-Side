@@ -1,0 +1,17 @@
+/build
+/bin
+.idea/*
+.gradle
+.classpath
+.project
+/eclipse
+*~
+*.launch
+/run
+/server
+/out
+*.iml
+/.settings
+/src/main/generated/resources/.cache/
+/.metadata
+/logs/

@@ -1,0 +1,9 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:grist_amber_block"
+  },
+  "grist_cost": {
+    "minestuck:amber": 1000
+  }
+}

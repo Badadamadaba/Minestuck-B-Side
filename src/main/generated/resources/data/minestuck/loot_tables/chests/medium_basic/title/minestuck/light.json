@@ -1,0 +1,66 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "weapons",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": []
+    },
+    {
+      "name": "supplies",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "quality": -1,
+          "name": "minecraft:torch"
+        }
+      ]
+    },
+    {
+      "name": "misc",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "quality": -1,
+          "name": "minecraft:glowstone"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "quality": 2,
+          "name": "minestuck:dice"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 12,
+          "quality": -1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2.0,
+                "max": 5.0
+              },
+              "add": false
+            }
+          ],
+          "name": "minecraft:glowstone_dust"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "quality": 2,
+          "name": "minestuck:sbahj_poster"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:jar_of_bugs"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 12,
+      "max_inclusive": 18
+    }
+  }
+}

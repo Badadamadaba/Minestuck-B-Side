@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:mercury_sixlets"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 150,
+      "max_inclusive": 180
+    }
+  }
+}

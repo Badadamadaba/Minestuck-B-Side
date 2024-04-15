@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minestuck:computer"
+    ]
+  },
+  "criteria": {
+    "has_computer_parts": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:computer_parts"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minestuck:computer"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_computer_parts",
+      "has_the_recipe"
+    ]
+  ]
+}

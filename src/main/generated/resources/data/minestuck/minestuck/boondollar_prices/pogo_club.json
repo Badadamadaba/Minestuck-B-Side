@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:pogo_club"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 900,
+      "max_inclusive": 1200
+    }
+  }
+}

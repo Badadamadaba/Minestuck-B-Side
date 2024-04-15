@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "#texture"
+	},
+	"elements": [
+		{
+			"from": [5, 1, 6],
+			"to": [11, 1.75, 10],
+			"faces": {
+				"up": {"uv": [0, 0, 6, 4], "texture": "#texture"},
+				"down": {"uv": [0, 0, 6, 4], "texture": "#texture"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

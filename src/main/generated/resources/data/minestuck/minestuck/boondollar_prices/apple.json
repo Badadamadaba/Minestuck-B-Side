@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minecraft:apple"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 25,
+      "max_inclusive": 30
+    }
+  }
+}

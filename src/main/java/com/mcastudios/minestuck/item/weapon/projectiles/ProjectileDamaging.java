@@ -1,0 +1,12 @@
+package com.mcastudios.minestuck.item.weapon.projectiles;
+
+import net.minecraft.world.item.Item;
+
+public interface ProjectileDamaging
+{
+	int getProjectileDamage();
+	static int getDamageFromItem(Item item)
+	{
+		return item instanceof ProjectileDamaging ? ((ProjectileDamaging) item).getProjectileDamage() : 0;
+	}
+}

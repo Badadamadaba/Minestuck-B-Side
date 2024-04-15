@@ -1,0 +1,10 @@
+package com.mcastudios.minestuck.util;
+
+import net.minecraft.world.damagesource.DamageSource;
+
+public class MSDamageSources
+{
+	public static final DamageSource SPIKE = new DamageSource("minestuck.spike").setScalesWithDifficulty();
+	public static final DamageSource DECAPITATION = new DamageSource("minestuck.decapitation").bypassInvul().bypassArmor().bypassMagic();
+	
+}

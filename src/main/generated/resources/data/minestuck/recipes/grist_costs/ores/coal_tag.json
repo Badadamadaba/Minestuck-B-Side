@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:source_grist_cost",
+  "ingredient": {
+    "tag": "forge:ores/coal"
+  },
+  "grist_cost": {
+    "minestuck:build": 4
+  },
+  "sources": [
+    "minecraft:coal"
+  ],
+  "multiplier": 3.0
+}

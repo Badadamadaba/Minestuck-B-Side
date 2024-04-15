@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:copse_crusher"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 1000,
+      "max_inclusive": 1500
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minestuck:cake_from_mix"
+    ]
+  },
+  "criteria": {
+    "has_cake_mix": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minestuck:cake_mix"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minestuck:cake_from_mix"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cake_mix",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minestuck:spades_suitarang"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 30,
+      "max_inclusive": 50
+    }
+  }
+}

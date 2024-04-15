@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minecraft:dragon_breath"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 50,
+      "max_inclusive": 100
+    }
+  }
+}

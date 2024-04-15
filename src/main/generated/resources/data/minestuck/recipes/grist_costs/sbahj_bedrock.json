@@ -1,0 +1,9 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:sbahj_bedrock"
+  },
+  "grist_cost": {
+    "minestuck:artifact": 2000
+  }
+}

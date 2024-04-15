@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "minecraft:salmon"
+  },
+  "range": {
+    "type": "minecraft:uniform",
+    "value": {
+      "min_inclusive": 40,
+      "max_inclusive": 60
+    }
+  }
+}
