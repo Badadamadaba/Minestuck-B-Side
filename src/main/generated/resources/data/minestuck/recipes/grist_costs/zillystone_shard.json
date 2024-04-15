@@ -1,0 +1,9 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:zillystone_shard"
+  },
+  "grist_cost": {
+    "minestuck:zillium": 1
+  }
+}

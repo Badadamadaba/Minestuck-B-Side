@@ -527,7 +527,7 @@ public class MSBlocks
 	public static final RegistryObject<Block> CRUXITE_DOWEL = REGISTER.register("cruxite_dowel", () -> new CruxiteDowelBlock(Block.Properties.of(Material.GLASS).strength(0.0F)));
 	public static final LotusTimeCapsuleMultiblock LOTUS_TIME_CAPSULE_BLOCK = new LotusTimeCapsuleMultiblock(REGISTER);
 	public static final RegistryObject<Block> SBAHJ_BEDROCK = REGISTER.register("sbahj_bedrock", () -> new Block(Block.Properties.of(Material.CAKE).strength(-1.0F)));
-	public static final RegistryObject<Block> ZILLYSTONE = REGISTER.register("zillystone", () -> new Block(Block.Properties.of(Material.STONE).strength(5.5F, 999F)));
+	public static final RegistryObject<Block> ZILLYSTONE = REGISTER.register("zillystone", () -> new ZillystoneBlock(Block.Properties.of(Material.STONE).strength(5.5F, 999F)));
 	
 	
 	

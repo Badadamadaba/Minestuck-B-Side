@@ -794,6 +794,7 @@ public class MinestuckGristCostsProvider extends RecipeProvider
 		GristCostRecipeBuilder.of(MSBlocks.ZILLYSTONE.get()).grist(ZILLIUM,1).grist(BUILD, 100).build(recipeSaver);
 		GristCostRecipeBuilder.of(MSItems.MOONSTONE.get()).grist(AMETHYST, 3).grist(BUILD, 5).grist(COBALT, 4).grist(URANIUM, 2);
 		GristCostRecipeBuilder.of(MSItems.MOONSTONE_CHISEL.get()).grist(AMETHYST, 3).grist(BUILD, 6).grist(COBALT, 4).grist(URANIUM, 2);
+		GristCostRecipeBuilder.of(MSItems.ZILLYSTONE_SHARD.get()).grist(ZILLIUM, 1).build(recipeSaver);
 		
 		GristCostRecipeBuilder.of(ExtraForgeTags.Items.TIN_INGOTS).grist(RUST, 12).grist(CAULK, 8).buildFor(recipeSaver, Minestuck.MOD_ID);
 		GristCostRecipeBuilder.of(ExtraForgeTags.Items.SILVER_INGOTS).grist(RUST, 12).grist(MERCURY, 8).buildFor(recipeSaver, Minestuck.MOD_ID);
